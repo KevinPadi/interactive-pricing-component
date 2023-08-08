@@ -1,13 +1,9 @@
-import { useRef } from 'react'
+import Button from './components/Button'
+import Label from './components/Label'
+import SwitchButton from './components/SwitchButton'
 
 function App () {
-  const inputRef = useRef(null)
-
   const sliderColor = (e) => {
-    // const value = (e.currentTarget - e.currentTarget.min) / (e.currentTarget.max - e.currentTarget.min) * 100
-    // e.currentTarget.style.background = 'linear-gradient(to right, #82CFD0 0%, #82CFD0 ' + value + '%, #fff ' + value + '%, white 100%)'
-    // console.log(e.currentTarget.min)
-
     let target = e.target
     if (e.target.type !== 'range') {
       target = document.getElementById('range')
@@ -20,28 +16,40 @@ function App () {
   }
 
   return (
-    <>
-      <div className='container mx-auto w-[450px] mt-20'>
-        <div className='flex flex-col justify-center text-center bg-circlesPattern bg-no-repeat bg-center w-[100%] h-[150px]'>
-          <h1 className='text-darkBlue text-3xl font-bold'>Simple, traffic-based pricing</h1>
-          <h2 className='text-grayishBlue text-md'>Sign-up for our 30-day trial. No credit card required.</h2>
-        </div>
-        <section className='m-auto mt-11 h-[350px] w-[500px] rounded-lg bg-gray-300'>
-          <div className='flex h-56 flex-col gap-5 rounded-lg  p-8'>
-            <div className='flex justify-between'>
-              <p>100K PAGEVIEWS</p>
-              <p>$16.00 <span>/ month</span></p>
-            </div>
-            <div>
-              <input
-                type='range' defaultValue={2} min='0' max='4' step='1' onInput={sliderColor}
-              />
-            </div>
-          </div>
-        </section>
-
+    <div className='container mx-auto w-[450px] mt-20'>
+      <div className='flex flex-col justify-center text-center bg-circlesPattern bg-no-repeat bg-center w-[100%] h-[150px]'>
+        <h1 className='text-darkBlue text-3xl font-bold'>Simple, traffic-based pricing</h1>
+        <h2 className='text-grayishBlue text-md'>Sign-up for our 30-day trial. No credit card required.</h2>
       </div>
-    </>
+      <section className='mx-auto mt-11 h-[350px] w-[500px] rounded-lg bg-veryPaleBlue divide-y divide-lightGrayishBlueBar'>
+        <div className='flex h-56 flex-col gap-9 rounded-t-lg p-10'>
+          <div className='flex justify-between items-center'>
+            <p className='text-grayishBlue text-sm font-bold tracking-widest'>100K PAGEVIEWS</p>
+            <p className='flex items-center text-4xl font-bold text-darkBlue'>$16.00<span className='text-sm font-normal text-grayishBlue ml-1'>/ month</span></p>
+          </div>
+          <div className=''>
+            <input
+              type='range' defaultValue={2} min='0' max='4' step='1' onInput={sliderColor}
+            />
+          </div>
+          <div className='flex justify-center items-center gap-4'>
+            <p className='text-sm text-grayishBlue'>Monthly billing</p>
+            <SwitchButton />
+            <p className='text-sm text-grayishBlue'>Year billing</p>
+            <p className='bg-lightGrayishRed text-lightRed rounded-full text-[10px] font-bold px-1'>25% discount</p>
+          </div>
+        </div>
+        <div className='flex justify-between items-center p-10'>
+          <div className='flex flex-col gap-3'>
+            <Label title='Unlimited websites' />
+            <Label title='100% data ownership' />
+            <Label title='Email reports' />
+          </div>
+          <Button />
+          <div />
+        </div>
+      </section>
+    </div>
   )
 }
 
