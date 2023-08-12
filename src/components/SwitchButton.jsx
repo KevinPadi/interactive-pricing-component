@@ -17,8 +17,8 @@ const SwitchButton = () => {
           className='sr-only'
         />
         <div
-          className={`hover:bg-strongCyan hover:transition-colors box block h-6 w-10 rounded-full ${
-              isChecked ? 'bg-lightGrayishBlueBg' : 'bg-lightGrayishBlueBg'
+          className={`box block h-6 w-10 rounded-full ${
+              isChecked ? 'bg-strongCyan' : 'bg-lightGrayishBlueBg'
             }`}
         />
         <div
