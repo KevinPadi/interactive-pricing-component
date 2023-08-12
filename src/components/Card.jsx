@@ -30,7 +30,7 @@ function Card () {
           <SwitchButton />
           <p className='text-[11px] md:text-sm text-grayishBlue'>Year billing</p>
           {/* <p className='text-[11px] bg-lightGrayishRed text-lightRed rounded-full  font-bold py-[2px] px-[5px] hidden md:block'>25% discount</p> */}
-          <p className='text-[10px] md:text-sm bg-lightGrayishRed text-lightRed rounded-full  font-bold py-[2px] px-[5px]'>-25% <span className='md:before:content-["discount"]' /></p>
+          <p className='text-[10px] md:text-[12px] bg-lightGrayishRed text-lightRed rounded-full  font-semibold py-[2px] px-[5px]'>-25% <span className='md:before:content-["discount"]' /></p>
         </div>
       </div>
       <div className='flex flex-col gap-8 items-center md:flex md:flex-row md:justify-between p-5 md:p-10'>
