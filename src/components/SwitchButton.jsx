@@ -1,10 +1,6 @@
-import React, { useState } from 'react'
-
-const SwitchButton = () => {
-  const [isChecked, setIsChecked] = useState(false)
-
-  const handleCheckboxChange = () => {
-    setIsChecked(!isChecked)
+const SwitchButton = ({ handleCheckboxChange, isChecked }) => {
+  const handleChecked = () => {
+    handleCheckboxChange()
   }
 
   return (
@@ -13,7 +9,7 @@ const SwitchButton = () => {
         <input
           type='checkbox'
           checked={isChecked}
-          onChange={handleCheckboxChange}
+          onChange={handleChecked}
           className='sr-only'
         />
         <div
