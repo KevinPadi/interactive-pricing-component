@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/interactive-pricing-component-using-react-and-tailwindcss-5nc-5W3L_x)
+- Live Site URL: [GitHub Pages](https://kevinpadi.github.io/interactive-pricing-component/)
 
 ## My process
 
