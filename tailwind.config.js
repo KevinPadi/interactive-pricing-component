@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        bgPattern: "url('./images/bg-pattern.svg')",
-        circlesPattern: "url('./images/pattern-circles.svg')"
+        bgPattern: "url('/images/bg-pattern.svg')",
+        circlesPattern: "url('/images/pattern-circles.svg')"
       },
       fontFamily: {
         sans: ['Manrope'],
